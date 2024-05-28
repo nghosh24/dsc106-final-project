@@ -1,8 +1,8 @@
 <section id="intro">
-  <h1 id="intro-hed">Title Of The Article</h1>
-  <h1 class="intro-sub">Subtitle of the article.</h1>
+  <h1 id="intro-hed">Understanding North American Hurricanes</h1>
+  <h1 class="intro-sub">Exploring characteristics and damages from hurricanes affecting North America from 2000-2023</h1>
   <h3 id="intro__date">
-    <a href="https://twitter.com/" target="_blank">Author Name</a>, Month Year
+    By Niha Ghosh and Eshaan Roy
   </h3>
 </section>
 

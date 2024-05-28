@@ -13,7 +13,7 @@
 <Meta />
 <Title />
 <Intro />
-<TextAndMathEquations />
+<!-- <TextAndMathEquations /> -->
 <ScrollSide />
 <LineChart />
 <ScrollCenter />
