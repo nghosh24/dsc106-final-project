@@ -8,17 +8,16 @@
 
   // Paragraph text for scrolly
   $: steps = [
-    `<h1 class='step-title'>Step 1</h1>
+    `<h1 class='background-info'>What causes hurricanes?</h1>
        <br><br>
       <p>
-       Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
+        Hurricanes are formed over warm ocean waters, and the interaction with warm air creates low pressure zones that further fuel the storm. This creates a rotating system of clouds and thunderstorms, which can then move over land and cause severe damage.
       </p>`,
-    `<h1 class='step-title'>Step 2</h1>
+    `<h1 class='background-info'>Categories</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
+        Hurricanes are classified into 6 categories: Tropical Storm, and then Category 1 through 5. A Category storm is the most severe hurricane. These classifications are based on the hurricane wind speed. Category 5 hurricanes have a sustained wind speed of greater than 155 miles per hours.
         </p>
     <br><br>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sint aut corrupti ullam neque quia labore laborum perspiciatis, molestias amet at, voluptatem ratione quaerat in sit minima reprehenderit molestiae, nobis sed. Earum facere exercitationem sit rerum, expedita magni nihil alias?
   `,
   ];
 
@@ -40,10 +39,9 @@
   $: if (typeof value !== "undefined") target2event[value]();
 </script>
 
-<h2 class="body-header">Side Scrolly Example</h2>
+<h2 class="body-header">Background Info</h2>
 <p class="body-text">
-  Here's an example of a typical side-scroller. It's responsive, and will fold
-  to an overlap scroll if the screen gets small enough:
+  Here is some additional information to understand how hurricanes are formed and classified.
 </p>
 <section>
   <!-- scroll container -->
