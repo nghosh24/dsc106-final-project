@@ -7,7 +7,7 @@
     important information since some places are at a higher risk for more severe storms,
     which can help people plan where to direct resources in the case of an emergency.
     Hopefully, we will be able to collectively combat climate change so that we experience
-    less frequent and intense hurricanes.
+    less frequent and intense hurricanes.  
   </p>
 </section>
 
