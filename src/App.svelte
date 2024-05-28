@@ -18,4 +18,4 @@
 <LineChart />
 <ScrollCenter />
 <Conclusion />
-<Resources />
+<!-- <Resources /> -->
