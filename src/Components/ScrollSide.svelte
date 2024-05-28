@@ -36,6 +36,12 @@
     },
   };
 
+  const imageUrls = [
+    "hurricane1.jpeg",
+    "hurricane2.jpeg",
+    "hurricane-categories.jpeg"
+  ];
+
   $: if (typeof value !== "undefined") target2event[value]();
 </script>
 
@@ -50,6 +56,8 @@
       <Scrolly bind:value>
         {#each steps as text, i}
           <div class="step" class:active={value === i}>
+            <!-- svelte-ignore a11y-img-redundant-alt -->
+            <img src={imageUrls[i]} alt="Step Image" />
             <div class="step-content">{@html text}</div>
           </div>
         {/each}
@@ -66,7 +74,7 @@
     </div>
   </div>
   <br /><br />
-  <p class="body-text">And that's the end of our scrolly.</p>
+  <p class="body-text">Now we can dive into further exploration of the hurricanes in North America over the past 2 decades.</p>
 </section>
 
 <style>
