@@ -8,7 +8,7 @@
     damaging weather events is hurricanes, which can destroy people's homes, livelihoods,
     and take countless lives. We decided to do an investigation into the trends of 
     hurricanes in North America from 2000 to 2023 to better understand the characteristics
-    and impacts of the most damaging hurricanes.
+    and impacts of the most damaging hurricanes.  
   </p>
 </section>
 
