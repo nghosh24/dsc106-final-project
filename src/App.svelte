@@ -16,6 +16,9 @@
 <!-- <TextAndMathEquations /> -->
 <ScrollSide />
 <LineChart />
-<ScrollCenter />
+
+<!-- <ScrollCenter /> -->
+
 <Conclusion />
+
 <!-- <Resources /> -->

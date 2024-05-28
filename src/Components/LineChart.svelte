@@ -54,7 +54,7 @@ function renderBarGraph() {
     // Define a linear color scale based on the count of hurricanes
     let colorScale = d3.scaleLinear()
       .domain([0, d3.max(data, d => d.count) / 3, 2 * d3.max(data, d => d.count) / 3, d3.max(data, d => d.count)])
-      .range(["white", "white", "blue", "red"]);
+      .range(["orange", "red", "blue", "purple"]);
 
     // X scale
     let x = d3.scaleBand()
@@ -106,9 +106,6 @@ function renderBarGraph() {
       .attr("width", x.bandwidth())
       .attr("height", 0) // Start bars with zero height
       .attr("fill", d => colorScale(d.count)) // Set fill color based on count using color scale
-      .transition() // Apply transition to the bars
-      .duration(1500) // Set duration of transition in milliseconds
-      .delay((d, i) => i * 100) // Set delay for each bar to create a stagger effect
       .attr("y", d => y(d.count))
       .attr("height", d => height - y(d.count));
 
@@ -118,9 +115,7 @@ function renderBarGraph() {
   let halfBarWidth = barWidth / 2;
   let verticalTextOffsetY = 30;
 // Add vertical text labels
-// Add vertical text labels
-// Add vertical text labels
-// Add vertical text labels
+
 svg.selectAll('.label')
     .data(data)
     .enter()
@@ -135,9 +130,6 @@ svg.selectAll('.label')
     .style('font-weight', '400')
     .style('font-size', '24px')
     .style('fill', 'white')
-    .transition() // Apply transition to the text
-    .duration(1500) // Set duration of transition in milliseconds
-    .delay((d, i) => i * 100) // Set delay for each text to create a stagger effect
     .attr('y', d => y(d.count) + 5) // Transition the 'y' attribute to its final position, adjusting it lower
     .attr('x', (d) => x(d.year) + halfBarWidth - 75); // Transition the 'x' attribute to its final position
 
@@ -156,9 +148,6 @@ svg.selectAll(".bar")
   })
   .on("mouseout", function(d) {
     d3.select(this)
-      .transition()
-      .duration(500)
-      .delay((d, i) => i * 100)
       .attr("fill", d => colorScale(d.count));
     var associatedLabel = svg.select(`#label-${d.year}`);
     associatedLabel.style('fill', 'black');

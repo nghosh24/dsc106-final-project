@@ -1,16 +1,13 @@
 <section id="conclusion">
-  <h1 class="body-header">Concluding Text</h1>
+  <h1 class="body-header">Conclusion</h1>
   <p class="body-text">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos voluptas dicta
-    blanditiis doloremque dolorum asperiores fugiat non, obcaecati maiores id,
-    voluptatum possimus libero iure laudantium dignissimos corrupti? Iure omnis
-    consectetur aperiam ipsam quod eum quas similique atque laboriosam ex
-    accusantium quaerat laudantium, est a libero sed cumque odio perspiciatis
-    enim, sequi, corrupti alias beatae nulla. Iure est ut dignissimos debitis
-    optio quasi vel distinctio officiis doloremque, ad voluptates, omnis nam
-    corporis, aut exercitationem ex excepturi tempore et modi unde alias nemo
-    accusantium. Tempore odio nulla ex ad ut molestiae unde minima ipsam
-    aliquid, omnis, labore commodi aliquam incidunt ratione autem?
+    Our visualizations have provided some information about the hurricanes that affected
+    North America from 2000 to 2023. In 2020, there were a record number of hurricanes. 
+    Our map also shows the areas that are most affected by these storms. This provides 
+    important information since some places are at a higher risk for more severe storms,
+    which can help people plan where to direct resources in the case of an emergency.
+    Hopefully, we will be able to collectively combat climate change so that we experience
+    less frequent and intense hurricanes.
   </p>
 </section>
 
