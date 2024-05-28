@@ -37,9 +37,9 @@
   };
 
   const imageUrls = [
-    "hurricane1.jpeg",
-    "hurricane2.jpeg",
-    "hurricane-categories.jpeg"
+    "../hurricane1.jpeg",
+    "../hurricane2.jpeg",
+    "../hurricane-categories.jpeg"
   ];
 
   $: if (typeof value !== "undefined") target2event[value]();
@@ -55,9 +55,7 @@
     <div class="steps-container">
       <Scrolly bind:value>
         {#each steps as text, i}
-          <div class="step" class:active={value === i}>
-            <!-- svelte-ignore a11y-img-redundant-alt -->
-            <img src={imageUrls[i]} alt="Step Image" />
+          <div class="step" class:active={value === i}>    
             <div class="step-content">{@html text}</div>
           </div>
         {/each}
@@ -67,9 +65,13 @@
     <div class="charts-container">
       <div class="chart-one">
         <svg id="chart1" />
+        <!-- svelte-ignore a11y-img-redundant-alt -->
+        <img src="../hurricane1.jpeg" alt="hurricane img" />
       </div>
       <div class="chart-two">
         <svg id="chart2" />
+        <!-- svelte-ignore a11y-img-redundant-alt -->
+        <img src="../hurricane2.jpeg" alt="hurricane img 2" />
       </div>
     </div>
   </div>
