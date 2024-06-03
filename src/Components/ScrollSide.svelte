@@ -66,12 +66,12 @@
       <div class="chart-one">
         <svg id="chart1" />
         <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img src="../hurricane1.jpeg" alt="hurricane img" />
+        <img src="dist/hurricane1.jpeg" alt="hurricane img" />
       </div>
       <div class="chart-two">
         <svg id="chart2" />
         <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img src="../hurricane2.jpeg" alt="hurricane img 2" />
+        <img src="dist/hurricane2.jpeg" alt="hurricane img 2" />
       </div>
     </div>
   </div>
