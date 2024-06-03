@@ -8,6 +8,7 @@
   import Conclusion from "./Components/Conclusion.svelte";
   import Resources from "./Components/Resources.svelte";
   import ScrollSide from "./Components/ScrollSide.svelte";
+  import MapGraph from "./Components/MapGraph.svelte";
 </script>
 
 <Meta />
@@ -18,7 +19,7 @@
 <LineChart />
 
 <!-- <ScrollCenter /> -->
-
+<MapGraph />
 <Conclusion />
 
 <!-- <Resources /> -->
