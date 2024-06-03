@@ -2,7 +2,7 @@
     import { onMount } from 'svelte';
     import mapboxgl from 'mapbox-gl'; // Import Mapbox GL library
     import * as d3 from 'd3'; // Import D3 library
-    import geojson from 'Simple.geojson';
+    import geojson from '../../Simple.geojson';
 
     let map; // Variable to hold the map object
     let Rainfall = true; // Initial visibility for Rain
