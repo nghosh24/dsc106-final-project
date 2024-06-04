@@ -18,7 +18,7 @@
 
     onMount(async () => {
     // Load the CSV data using D3
-    const res = await fetch('dist/assets/hurricane_data.csv');
+    const res = await fetch('assets/hurricane_data.csv');
     const csv = await res.text();
     data = d3.csvParse(csv, d3.autoType);    
 
@@ -49,10 +49,10 @@
 
     map.on('load', async () => {
 
-      const response = await fetch('dist/assets/Simple.geojson');
+      const response = await fetch('assets/Simple.geojson');
       const geodata = await response.json();
 
-      const can_res = await fetch('dist/assets/canada_provinces.geojson');
+      const can_res = await fetch('assets/canada_provinces.geojson');
       const geo_canada = await can_res.json();
 
       map.addSource('states', {
