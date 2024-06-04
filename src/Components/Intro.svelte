@@ -13,4 +13,14 @@
 </section>
 
 <style>
+  p {
+    text-align: justify;
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 2;
+    color: black;
+    padding: 10px;
+    max-width: 1000px;
+  }
 </style>

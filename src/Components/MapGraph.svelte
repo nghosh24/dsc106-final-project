@@ -98,6 +98,8 @@
         }
       });
 
+
+
       // Define the colors for each type
       const colors = {
         'Rainfall': 'blue',
@@ -106,6 +108,32 @@
         'Fatalities': 'red',
       };
   });
+
+  map.on('mousemove', 'states-layer', function (e) {
+    // Change the cursor style to a pointer when hovering over the layer
+    map.getCanvas().style.cursor = 'pointer';
+
+    // Get the properties of the feature under the mouse pointer
+    //var featureProperties = e.features[0].properties;
+
+    // Create a tooltip HTML content based on the feature properties
+    var tooltipContent = '<h3>' + 'Hurricane Allison' + '</h3>' +
+                         '<p>Category: ' + 'Tropical Storm' + '</p>';
+
+    // Display the tooltip at the mouse position
+    new mapboxgl.Popup()
+        .setLngLat(e.lngLat)
+        .setHTML(tooltipContent)
+        .addTo(map);
+});
+
+// Reset the cursor style and close the tooltip when the mouse leaves the layer
+map.on('mouseleave', 'states-layer', function () {
+    map.getCanvas().style.cursor = '';
+    map.getCanvas().title = '';
+});
+
+
 });
 
   // Watch for changes in the checkbox values

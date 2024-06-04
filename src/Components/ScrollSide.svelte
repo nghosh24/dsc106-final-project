@@ -9,13 +9,14 @@
   // Paragraph text for scrolly
   $: steps = [
     `<h1 class='background-info'>What causes hurricanes?</h1>
-       <br><br>
       <p>
         Hurricanes are formed over warm ocean waters, and the interaction with warm air creates low pressure zones that further fuel the storm. This creates a rotating system of clouds and thunderstorms, which can then move over land and cause severe damage.
-      </p>`,
+      </p>
+    <br><br>
+  `,
     `<h1 class='background-info'>Categories</h1>
       <p>
-        Hurricanes are classified into 6 categories: Tropical Storm, and then Category 1 through 5. A Category storm is the most severe hurricane. These classifications are based on the hurricane wind speed. Category 5 hurricanes have a sustained wind speed of greater than 155 miles per hours.
+        Hurricanes are classified into 6 categories: Tropical Storm, and then Category 1 through 5. A Category storm is the most severe hurricane. These classifications are based on the hurricane wind speed. Category 5 hurricanes have a sustained wind speed of greater than 157 miles per hours.
         </p>
     <br><br>
   `,
@@ -23,23 +24,27 @@
 
   const target2event = {
     0: () => {
-      // console.log('0' )
+      select("#chart1").style("background-image", "none");
     },
     1: () => {
-      select("#chart1").style("background-color", "red");
-      select("#chart2").style("background-color", "green");
+      select("#chart1").style("background-image", `url(${images[4]})`)
+      .style("background-size", "contain")
+      .style("background-repeat", "no-repeat");
     },
 
     2: () => {
-      select("#chart1").style("background-color", "purple");
-      select("#chart2").style("background-color", "coral");
+      select("#chart1").style("background-image", `url(${images[3]})`)
+      .style("background-size", "contain")
+      .style("background-repeat", "no-repeat");
     },
   };
 
-  const imageUrls = [
-    "../hurricane1.jpeg",
-    "../hurricane2.jpeg",
-    "../hurricane-categories.jpeg"
+  const images = [
+    "assets/hurricane1.jpeg",
+    "assets/hurricane_katrina.jpeg",
+    "assets/hurricane_katrina.jpeg",
+    "assets/hurricane_ian.jpeg",
+    "assets/categories.jpeg"
   ];
 
   $: if (typeof value !== "undefined") target2event[value]();
@@ -49,7 +54,7 @@
 <p class="body-text">
   Here is some additional information to understand how hurricanes are formed and classified.
 </p>
-<section>
+<section style="background-image: url({images[value]})">
   <!-- scroll container -->
   <div class="section-container">
     <div class="steps-container">
@@ -65,39 +70,28 @@
     <div class="charts-container">
       <div class="chart-one">
         <svg id="chart1" />
-        <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img src="dist/hurricane1.jpeg" alt="hurricane img" />
-      </div>
-      <div class="chart-two">
-        <svg id="chart2" />
-        <!-- svelte-ignore a11y-img-redundant-alt -->
-        <img src="dist/hurricane2.jpeg" alt="hurricane img 2" />
       </div>
     </div>
   </div>
   <br /><br />
-  <p class="body-text">Now we can dive into further exploration of the hurricanes in North America over the past 2 decades.</p>
 </section>
+<p class="body-text">Now we can dive into further exploration of the hurricanes in North America over the past 2 decades.</p>
+
 
 <style>
-  #chart1,
-  #chart2 {
+  #chart1 {
     width: 100%;
     height: 100%;
   }
   .chart-one {
     width: 100%;
     height: 100%;
-    border: 3px solid skyblue;
+    background-position: center;
   }
-  .chart-two {
-    width: 100%;
-    height: 100%;
-    border: 3px solid coral;
-  }
+
   /* space after scroll is finished */
   .spacer {
-    height: 40vh;
+    height: 5vh;
   }
 
   .charts-container {
@@ -106,15 +100,14 @@
     display: grid;
     width: 50%;
     grid-template-columns: 100%;
-    grid-row-gap: 2rem;
+    grid-row-gap: 0rem;
     grid-column-gap: 0rem;
-    grid-template-rows: repeat(2, 1fr);
-    height: 85vh;
-    border: 3px solid black;
+    grid-template-rows: 1fr;
+    height: 70vh;
   }
 
   .section-container {
-    margin-top: 1em;
+    margin-top: 40px;
     text-align: center;
     transition: background 100ms;
     display: flex;
@@ -128,7 +121,7 @@
   }
 
   .step-content {
-    font-size: 18px;
+    font-size: 20px;
     background: var(--bg);
     color: #ccc;
     border-radius: 1px;
@@ -141,7 +134,7 @@
     width: 75%;
     margin: auto;
     max-width: 500px;
-    font-family: var(--font-main);
+    font-family: 'Georgia';
     line-height: 1.3;
     border: 5px solid var(--default);
   }
@@ -158,6 +151,26 @@
   .steps-container {
     flex: 1 1 40%;
     z-index: 10;
+  }
+
+  .body-header {
+    font-size: 30px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    font-family: 'Georgia';
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .body-text {
+    font-size: 22px; 
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Georgia';
+    max-width: 1000px;
+
   }
 
   /* Comment out the following line to always make it 'text-on-top' */

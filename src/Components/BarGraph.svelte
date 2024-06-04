@@ -120,22 +120,18 @@ svg.selectAll('.label')
     .data(data)
     .enter()
     .append('text')
-    .attr('x', (d) => x(d.year) + halfBarWidth - 250 ) // Set initial x position to the final position
-    .attr('y', d => y(d.count) + 5 ) // Set initial y position to the final position
+    .attr('x', (d) => x(d.year) + halfBarWidth -250  ) // Set initial x position to the final position
+    .attr('y', d => y(d.count) + 10 ) // Set initial y position to the final position
     .text(d => d.count.toLocaleString())
     .attr('transform', d => `rotate(-90 ${x(d.year) + halfBarWidth} ${y(d.count)})`) // Set initial rotation
     .attr('class', 'label')
-    .attr('text-anchor', 'middle')
-    .style('font-family', "'Kode Mono', monospace")
+    .attr('text-anchor', 'right')
+    .style('font-family', "Georgia")
     .style('font-weight', '400')
     .style('font-size', '24px')
     .style('fill', 'white')
     .attr('y', d => y(d.count) + 5) // Transition the 'y' attribute to its final position, adjusting it lower
-    .attr('x', (d) => x(d.year) + halfBarWidth - 75); // Transition the 'x' attribute to its final position
-
-
-
-
+    .attr('x', (d) => x(d.year) + halfBarWidth - 30); // Transition the 'x' attribute to its final position
 
 
 
@@ -144,7 +140,7 @@ svg.selectAll(".bar")
   .on("mouseover", function(d) {
     d3.select(this).attr("fill", "orange");
     var associatedLabel = svg.select(`#label-${d.year}`);
-    associatedLabel.style('fill', 'white');
+    associatedLabel.style('fill', 'black');
   })
   .on("mouseout", function(d) {
     d3.select(this)
@@ -154,10 +150,7 @@ svg.selectAll(".bar")
     svg.selectAll(".hover-text").remove();
   });
 
-
 }
-
-
 </script>
 
 <main>
@@ -171,16 +164,20 @@ svg.selectAll(".bar")
   {/if}
   <!-- Container for the bar graph -->
   <div id="barGraph"></div>
+  <br><br>
 </main>
 
 <style>
-  body {
+  main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   h2 {
-    text-align: left;
-    font-family: "Kode Mono", monospace;
+    text-align: center;
+    font-family: "Georgia";
     font-weight: 400;
     font-size: 42px;
     line-height: 1;
@@ -188,14 +185,20 @@ svg.selectAll(".bar")
     padding: 10px;
   }
   p {
-    text-align: left;
-    font-family: "Kode Mono", monospace;
+    text-align: center;
+    font-family: "Georgia";
     font-weight: 400;
     font-size: 18px;
     line-height: 2;
     color: black;
     padding: 10px;
   }
+
+  #barGraph {
+    width: 120%; 
+    max-width: 1200px; 
+  }
+
   svg {
     font: 10px sans-serif;
   }

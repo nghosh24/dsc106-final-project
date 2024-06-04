@@ -8,7 +8,7 @@
 
 <style>
   #intro {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 1rem auto;
     text-align: center;
     padding-top: 1rem;
@@ -23,6 +23,7 @@
     max-width: 100%;
     margin: auto;
     color: var(--squid-ink);
+    font-family: 'Georgia'
   }
 
   .intro-sub {
@@ -32,7 +33,7 @@
     margin: 1rem;
     opacity: 0.75;
     padding: 2rem;
-    font-family: var(--font-main);
+    font-family: 'Georgia';
   }
 
   #intro__date {
@@ -44,7 +45,7 @@
     margin-bottom: 0px;
     color: black;
     padding-bottom: 1rem;
-    font-family: var(--font-main);
+    font-family: 'Georgia';
   }
 
   /* mobile */
