@@ -15,4 +15,24 @@
   #conclusion {
     padding: 2rem 1rem;
   }
+
+  .body-header {
+    font-size: 30px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    font-family: 'Georgia';
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .body-text {
+    font-size: 22px; 
+    line-height: 1.5; 
+    margin-bottom: 20px; 
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Georgia';
+    max-width: 1000px;
+
+  }
 </style>

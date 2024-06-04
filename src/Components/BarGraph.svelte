@@ -54,7 +54,7 @@ function renderBarGraph() {
     // Define a linear color scale based on the count of hurricanes
     let colorScale = d3.scaleLinear()
       .domain([0, d3.max(data, d => d.count) / 3, 2 * d3.max(data, d => d.count) / 3, d3.max(data, d => d.count)])
-      .range(["orange", "red", "blue", "purple"]);
+      .range(["cyan", 'blue', 'purple', 'red']);
 
     // X scale
     let x = d3.scaleBand()
@@ -188,7 +188,7 @@ svg.selectAll(".bar")
     text-align: center;
     font-family: "Georgia";
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 2;
     color: black;
     padding: 10px;
