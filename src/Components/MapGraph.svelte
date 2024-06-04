@@ -10,74 +10,103 @@
     let WindSpeed = true; // Initial visibility for WindSpeed
     let DamageUSD = true; // Initial visibility for DamageUSD
     let Fatalities = true; // Initial visibility for Fatalities
+    let data = [];
+    let fifthrow = '';
     
     let circleSize = 3; // Initial circle size
     let circleOpacity = 0.6; // Initial circle opacity
 
     onMount(async () => {
     // Load the CSV data using D3
-    const data = await d3.csv('https://raw.githubusercontent.com/nghosh24/dsc106-final-project/main/hurricane_data.csv');
-    console.log("First 5 tuples:", data.slice(0, 5));
+    const res = await fetch('dist/assets/hurricane_data.csv');
+    const csv = await res.text();
+    data = d3.csvParse(csv, d3.autoType);    
+
+    fifthrow = data[4]['Affected Areas']; 
+    console.log('Affected Areas in the 5th row:', fifthrow);
+
+    let statesToColor = fifthrow.split(',\xa0').map(state => state.trim());
+    console.log(statesToColor);
+
+    let newEngland = ['Maine', 'Vermont', 'New Hampshire', 'Massachusetts', 'Connecticut'];
+    statesToColor = [...statesToColor, ...newEngland];
+
+    const color = 'red';
+    const stateColorArray = statesToColor.map(state => [state, color]);
+    console.log(stateColorArray);
 
     mapboxgl.accessToken = "pk.eyJ1Ijoibmdob3NoMjQiLCJhIjoiY2x3NXcwMW9wMW9rODJxbnZ3YnQ0M2YxbSJ9.4pqWQb2ek3y_3Ahya28EHA"; 
 
     map = new mapboxgl.Map({
       container: 'map', // HTML element ID where the map will be rendered
-      style: 'mapbox://styles/mapbox/light-v11', // Map style
+      style: 'mapbox://styles/mapbox/light-v10', // Map style
       center: [-98.5795, 39.8283], // Center coordinates for continental US
-      zoom: 4 // Initial zoom level
+      zoom: 3 // Initial zoom level
     });
 
      // Add map controls (optional)
-     map.addControl(new mapboxgl.NavigationControl());
+    //map.addControl(new mapboxgl.NavigationControl());
 
-     // Add circles for each data point
-    map.on('load', () => {
-      // Define the colors for each ethnicity
+    map.on('load', async () => {
+
+      const response = await fetch('dist/assets/Simple.geojson');
+      const geodata = await response.json();
+
+      const can_res = await fetch('dist/assets/canada_provinces.geojson');
+      const geo_canada = await can_res.json();
+
+      map.addSource('states', {
+        type: 'geojson',
+        data: geodata
+      });
+
+      map.addLayer({
+        id: 'states-layer',
+        type: 'fill',
+        source: 'states',
+        paint: {
+            'fill-color': {
+                property: 'NAME',
+                type: "categorical",
+                stops: stateColorArray
+            },
+            'fill-opacity': 0.7
+        }
+      });
+
+      map.addSource('canada', {
+        type: 'geojson',
+        data: geo_canada
+      });
+
+      map.addLayer({
+        id: 'canada-layer',
+        type: 'fill',
+        source: 'canada',
+        paint: {
+            'fill-color': {
+                property: 'prov_name_en',
+                type: "categorical",
+                stops: [
+                    ['Nova Scotia', 'red'],
+                    ['New Brunswick', 'red'],
+                    ['Prince Edward Island', 'red'],
+                    ['Newfoundland and Labrador', 'red']
+                ]
+            },
+            'fill-opacity': 0.7
+        }
+      });
+
+      // Define the colors for each type
       const colors = {
         'Rainfall': 'blue',
         'WindSpeed': 'purple',
         'DamageUSD': 'green',
         'Fatalities': 'red',
       };
-
-      // Group data by ethnicity
-      const dataByEthnicity = d3.group(data, d => d.Ethnicity);
-
-      // Add a layer for each ethnicity
-      dataByEthnicity.forEach((data, ethnicity) => {
-        const layerId = `circles-${ethnicity}`;
-
-        map.addSource(layerId, {
-          type: 'geojson',
-          data: {
-            type: 'FeatureCollection',
-            features: data.map(d => ({
-              type: 'Feature',
-              geometry: {
-                type: 'Point',
-                coordinates: [parseFloat(d.Longitude), parseFloat(d.Latitude)]
-              }
-            }))
-          }
-        });
-
-        map.addLayer({
-          id: layerId,
-          source: layerId,
-          type: 'circle',
-          paint: {
-            'circle-radius': circleSize,
-            'circle-color': colors[ethnicity],
-            'circle-opacity': circleOpacity
-          },
-          layout: {
-            'visibility': 'visible' // Initially set visibility to visible
-          }
-        });
-      });
-    });
   });
+});
 
   // Watch for changes in the checkbox values
   $: {

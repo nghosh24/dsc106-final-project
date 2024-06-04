@@ -20,8 +20,8 @@
 <LineChart />
 
 <!-- <ScrollCenter /> -->
-<!-- MapGraph /> -->
-<Map />
+<MapGraph /> 
+<!-- <Map /> -->
 <Conclusion />
 
 <!-- <Resources /> -->

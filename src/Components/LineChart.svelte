@@ -14,7 +14,7 @@
   let height = 500 - margin.top - margin.bottom;
 
   onMount(async () => {
-    const res = await fetch('hurricane_data.csv');
+    const res = await fetch('assets/hurricane_data.csv');
     const csv = await res.text();
     tempData = d3.csvParse(csv, d3.autoType);
 
