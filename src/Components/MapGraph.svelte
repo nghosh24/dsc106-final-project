@@ -433,9 +433,10 @@ $: {
     <h2>Effects of the hurricanes</h2>
 
     <p>Below is a map showing a few of the major hurricanes from the last 20 years. 
-        <br>
-        Hover over the affected areas to learn more about the individual 
-        hurricane's statistics.
+        <br><br>
+        Use the checkboxes to choose which hurricanes you want to see. The affected areas
+        are colored based on the hurricane. Hover over the affected areas to learn more about each individual 
+        hurricane's statistics relating to rainfall, wind speed, damage, and fatalities.
     </p>
 
     <div id="checkbox-container" class="checkbox-grid">

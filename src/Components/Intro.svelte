@@ -10,7 +10,7 @@
     and take countless lives. Join us as we delve into the patterns and trends that underlie 
     the hurricanes in <strong>North America from 2000 to 2023</strong> to better understand the characteristics
     and impacts of the most damaging hurricanes. Watch 
-    <a href="https://www.youtube.com/watch?v=4lQZmRmxSdQ" style="font-family: 'Georgia'">this video</a>
+    <a href="https://www.youtube.com/watch?v=4lQZmRmxSdQ" target="_blank" style="font-family: 'Georgia'">this video</a>
     for a walkthrough of the website!
   </p>
 </section>

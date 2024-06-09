@@ -1,7 +1,7 @@
 <section id="conclusion">
   <h1 class="body-header">Conclusion</h1>
   <p class="body-text">
-    Our visualizations have provided some information about the hurricanes that affected
+    Our interactive visualizations have provided some information about the hurricanes that affected
     North America from 2000 to 2023. In 2020, there were a record number of hurricanes, 
     highlighted by the red colored bar in the bar chart. Our map also shows the areas that are most affected by these storms. This provides 
     important information since some places are at a higher risk for more severe storms,
