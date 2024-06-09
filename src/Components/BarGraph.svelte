@@ -137,20 +137,17 @@ svg.selectAll('.label')
 
     // Add hover effect to display value on mouseover
 svg.selectAll(".bar")
-  .on("mouseover", function(d) {
+  .on("mouseover", function(e, d) {
     d3.select(this).attr("fill", "orange");
-    var associatedLabel = svg.select(`#label-${d.year}`);
-    associatedLabel.style('fill', 'black');
   })
   .on("mouseout", function(d) {
     d3.select(this)
       .attr("fill", d => colorScale(d.count));
-    var associatedLabel = svg.select(`#label-${d.year}`);
-    associatedLabel.style('fill', 'black');
-    svg.selectAll(".hover-text").remove();
   });
 
 }
+
+
 </script>
 
 <main>
@@ -159,7 +156,9 @@ svg.selectAll(".bar")
   {:else}
     <h2>From 2000 to 2023</h2>
     <p>
-      This graph shows the number of hurricanes each year from 2000 to 2023. 
+      This graph shows the number of hurricanes each year from 2000 to 2023.
+      <br> 
+      Hover over the bars to highlight them!
     </p>
   {/if}
   <!-- Container for the bar graph -->

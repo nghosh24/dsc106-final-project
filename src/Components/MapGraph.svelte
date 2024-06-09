@@ -213,45 +213,41 @@
 
 //hurrican allison
 map.on('mousemove', 'allison-states', function (e) {
-// Change the cursor style to a pointer when hovering over the layer
     map.getCanvas().style.cursor = 'pointer';
 
-    // Create a tooltip HTML content based on the feature properties
-    var tooltipContent = '<h2>Hurricane Allison</h2>' +
-                        '<p>Category: Tropical Storm</p>' +
-                        '<p>Year: 2001</p>' + 
-                        '<p>Rain (Inches): 40</p>' + 
-                        '<p>Highest Wind Speed: 60 mph</p>' + 
-                        '<p>Damages: 9000000000 USD</p>' + 
-                        '<p>Fatalities: 55</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Allison</h2>' +
+                        '<p style="font-family: Georgia">Category: Tropical Storm</p>' +
+                        '<p style="font-family: Georgia">Year: 2001</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 40</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 60 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 9000000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 55</p>';
 
-    // Update the tooltip content
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
 
-    // Display the tooltip at the mouse position
     tooltip.setLngLat(e.lngLat)
         .setOffset([0, tooltipOffsetY])
         .addTo(map);
 });
 
 map.on('mouseleave', 'allison-states', function () {
-    // Reset the cursor style and close the tooltip
-    map.getCanvas().style.cursor = '';
-    tooltip.remove(); // Remove the tooltip
+
+  map.getCanvas().style.cursor = '';
+    tooltip.remove(); 
 });
 
 map.on('mousemove', 'allison-canada', function (e) {
     map.getCanvas().style.cursor = 'pointer';
 
-    var tooltipContent = '<h2>Hurricane Allison</h2>' +
-                        '<p>Category: Tropical Storm</p>' +
-                        '<p>Year: 2001</p>' + 
-                        '<p>Rain (Inches): 40</p>' + 
-                        '<p>Highest Wind Speed: 60 mph</p>' + 
-                        '<p>Damages: 9000000000 USD</p>' + 
-                        '<p>Fatalities: 55</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Allison</h2>' +
+                        '<p style="font-family: Georgia">Category: Tropical Storm</p>' +
+                        '<p style="font-family: Georgia">Year: 2001</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 40</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 60 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 9000000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 55</p>';
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
@@ -270,13 +266,13 @@ map.on('mouseleave', 'allison-canada', function () {
 map.on('mousemove', 'katrina-states', function (e) {
     map.getCanvas().style.cursor = 'pointer';
 
-    var tooltipContent = '<h2>Hurricane Katrina</h2>' +
-                        '<p>Category: 5</p>' +
-                        '<p>Year: 2005</p>' + 
-                        '<p>Rain (Inches): 16.43</p>' + 
-                        '<p>Highest Wind Speed: 97 mph</p>' + 
-                        '<p>Damages: 623000000 USD</p>' + 
-                        '<p>Fatalities: 14</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Katrina</h2>' +
+                        '<p style="font-family: Georgia">Category: 5</p>' +
+                        '<p style="font-family: Georgia">Year: 2005</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 16.43</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 97 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 623000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 14</p>';
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
@@ -294,13 +290,13 @@ map.on('mouseleave', 'katrina-states', function () {
 map.on('mousemove', 'katrina-canada', function (e) {
     map.getCanvas().style.cursor = 'pointer';
 
-    var tooltipContent = '<h2>Hurricane Katrina</h2>' +
-                        '<p>Category: 5</p>' +
-                        '<p>Year: 2005</p>' + 
-                        '<p>Rain (Inches): 16.43</p>' + 
-                        '<p>Highest Wind Speed: 97 mph</p>' + 
-                        '<p>Damages: 623000000 USD</p>' + 
-                        '<p>Fatalities: 14</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Katrina</h2>' +
+                        '<p style="font-family: Georgia">Category: 5</p>' +
+                        '<p style="font-family: Georgia">Year: 2005</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 16.43</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 97 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 623000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 14</p>';
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
@@ -318,13 +314,13 @@ map.on('mouseleave', 'katrina-canada', function () {
 map.on('mousemove', 'katrina-caribbean', function (e) {
     map.getCanvas().style.cursor = 'pointer';
 
-    var tooltipContent = '<h2>Hurricane Katrina</h2>' +
-                        '<p>Category: 5</p>' +
-                        '<p>Year: 2005</p>' + 
-                        '<p>Rain (Inches): 16.43</p>' + 
-                        '<p>Highest Wind Speed: 97 mph</p>' + 
-                        '<p>Damages: 623000000 USD</p>' + 
-                        '<p>Fatalities: 14</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Katrina</h2>' +
+                        '<p style="font-family: Georgia">Category: 5</p>' +
+                        '<p style="font-family: Georgia">Year: 2005</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 16.43</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 97 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 623000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 14</p>';
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
@@ -343,13 +339,13 @@ map.on('mouseleave', 'katrina-caribbean', function () {
 map.on('mousemove', 'sandy-states', function (e) {
     map.getCanvas().style.cursor = 'pointer';
 
-    var tooltipContent = '<h2>Hurricane Sandy</h2>' +
-                        '<p>Category: 3</p>' +
-                        '<p>Year: 2012</p>' + 
-                        '<p>Rain (Inches): 3</p>' + 
-                        '<p>Highest Wind Speed: 115 mph</p>' + 
-                        '<p>Damages: 68700000000 USD</p>' + 
-                        '<p>Fatalities: 233</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Sandy</h2>' +
+                        '<p style="font-family: Georgia">Category: 3</p>' +
+                        '<p style="font-family: Georgia">Year: 2012</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 3</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 115 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 68700000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 233</p>';
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
@@ -367,13 +363,13 @@ map.on('mouseleave', 'sandy-states', function () {
 map.on('mousemove', 'sandy-canada', function (e) {
     map.getCanvas().style.cursor = 'pointer';
 
-    var tooltipContent = '<h2>Hurricane Sandy</h2>' +
-                        '<p>Category: 3</p>' +
-                        '<p>Year: 2012</p>' + 
-                        '<p>Rain (Inches): 3</p>' + 
-                        '<p>Highest Wind Speed: 115 mph</p>' + 
-                        '<p>Damages: 68700000000 USD</p>' + 
-                        '<p>Fatalities: 233</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Sandy</h2>' +
+                        '<p style="font-family: Georgia">Category: 3</p>' +
+                        '<p style="font-family: Georgia">Year: 2012</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 3</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 115 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 68700000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 233</p>';
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
@@ -391,13 +387,13 @@ map.on('mouseleave', 'sandy-canada', function () {
 map.on('mousemove', 'sandy-caribbean', function (e) {
     map.getCanvas().style.cursor = 'pointer';
 
-    var tooltipContent = '<h2>Hurricane Sandy</h2>' +
-                        '<p>Category: 3</p>' +
-                        '<p>Year: 2012</p>' + 
-                        '<p>Rain (Inches): 3</p>' + 
-                        '<p>Highest Wind Speed: 115 mph</p>' + 
-                        '<p>Damages: 68700000000 USD</p>' + 
-                        '<p>Fatalities: 233</p>';
+    var tooltipContent = '<h2 style="font-family: Georgia">Hurricane Sandy</h2>' +
+                        '<p style="font-family: Georgia">Category: 3</p>' +
+                        '<p style="font-family: Georgia">Year: 2012</p>' + 
+                        '<p style="font-family: Georgia">Rain (Inches): 3</p>' + 
+                        '<p style="font-family: Georgia">Highest Wind Speed: 115 mph</p>' + 
+                        '<p style="font-family: Georgia">Damages: 68700000000 USD</p>' + 
+                        '<p style="font-family: Georgia">Fatalities: 233</p>';
     tooltip.setHTML(tooltipContent);
 
     var tooltipOffsetY = -550;
@@ -437,8 +433,9 @@ $: {
     <h2>Effects of the hurricanes</h2>
 
     <p>Below is a map showing a few of the major hurricanes from the last 20 years. 
-        The user can hover over the affected areas to learn more about individual 
-        hurricans statistics.
+        <br>
+        Hover over the affected areas to learn more about the individual 
+        hurricane's statistics.
     </p>
 
     <div id="checkbox-container" class="checkbox-grid">
@@ -485,5 +482,9 @@ $: {
       padding: 10px;
       border: 3px solid #ccc; /* Add border around the grid */
       border-radius: 5px; /* Add some border radius for a rounded appearance */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      background-color: rgb(150, 190, 255, 0.3);
+      text-align: center;
     }
+
   </style>

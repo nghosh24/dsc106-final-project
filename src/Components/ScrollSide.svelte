@@ -8,13 +8,13 @@
 
   // Paragraph text for scrolly
   $: steps = [
-    `<h1 class='background-info'>What causes hurricanes?</h1>
+    `<h1 class='step-content'>What causes hurricanes?</h1>
       <p>
         Hurricanes are formed over warm ocean waters, and the interaction with warm air creates low pressure zones that further fuel the storm. This creates a rotating system of clouds and thunderstorms, which can then move over land and cause severe damage.
       </p>
     <br><br>
   `,
-    `<h1 class='background-info'>Categories</h1>
+    `<h1 class='step-content'>Categories</h1>
       <p>
         Hurricanes are classified into 6 categories: Tropical Storm, and then Category 1 through 5. A Category storm is the most severe hurricane. These classifications are based on the hurricane wind speed. Category 5 hurricanes have a sustained wind speed of greater than 157 miles per hours.
         </p>
@@ -142,6 +142,7 @@
   .step.active .step-content {
     background: #f1f3f3ee;
     color: var(--squid-ink);
+    font-family: 'Georgia';
   }
 
   .steps-container {
@@ -198,6 +199,7 @@
       max-width: 768px;
       font-size: 17px;
       line-height: 1.6;
+      font-family: 'Georgia';
     }
 
     .spacer {

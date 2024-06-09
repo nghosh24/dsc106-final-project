@@ -16,7 +16,7 @@
     });
 
     // Load the JSON data using D3
-    const data = await d3.json('public/Hurricane_data.json');
+    const data = await d3.json('dist/assets/hurricane_data.json');
 
     // Convert the hurricane data to GeoJSON format
     const hurricaneGeoJSON = {
